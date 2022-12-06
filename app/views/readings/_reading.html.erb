@@ -1,0 +1,15 @@
+<div id="<%= dom_id reading %>">
+  <p>
+    <strong><%=I18n.t("Title")  %></strong>
+    <%= reading.title %>
+  </p>
+
+  <p>
+    <strong>Csv file:</strong>
+    <%= link_to "#{reading.csv_file.content_type} - #{reading.csv_file.filename}", reading.csv_file if reading.csv_file.attached? %>
+    <%= link_to "build dataset", build_dataset_path(reading) if reading.csv_file.attached? %>
+   
+    <pre><%=I18n.t("Wow")  %></pre>
+  </p>
+
+</div>

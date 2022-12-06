@@ -73,3 +73,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "decisiontree", "~> 0.5.0"
+
+gem "pry", "~> 0.14.1"

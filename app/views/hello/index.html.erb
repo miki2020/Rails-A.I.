@@ -1,11 +1,16 @@
 <div class="App">
   <header class="App-header">
-    <img src="Octocat.png" class="App-logo" alt="logo" />
-    <p>
-      GitHub Codespaces <span class="heart">♥️</span> Rails
-    </p>
+    <nav>
+      <%=
+      
+        Rails.application.routes.routes.compact.map do |endpoint|
+          link_to endpoint.name, endpoint.name if endpoint.path.present?
+        end.join("<hr>").html_safe 
+      %>
+    </nav>
     <p class="small">
-      Edit <code>app/views/hello/index.html.erb</code> and see changes live!
+      <pre></pre>
     </p>
   </header>
+  
 </div>
